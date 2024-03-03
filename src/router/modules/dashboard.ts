@@ -19,16 +19,16 @@ export default {
       },
     },
     /** simple */
-    {
-      path: 'monitor',
-      name: 'monitor',
-      component: () => import('@/views/dashboard/monitor/index.vue'),
-      meta: {
-        locale: 'menu.dashboard.monitor',
-        requiresAuth: true,
-        roles: ['admin'],
-      },
-    },
+    // {
+    //   path: 'monitor',
+    //   name: 'monitor',
+    //   component: () => import('@/views/dashboard/monitor/index.vue'),
+    //   meta: {
+    //     locale: 'menu.dashboard.monitor',
+    //     requiresAuth: true,
+    //     roles: ['admin'],
+    //   },
+    // },
     /** simple end */
   ],
 }

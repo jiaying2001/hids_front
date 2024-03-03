@@ -1,6 +1,6 @@
+import { LoginData, getRole, getUserInfo, login as userLogin, logout as userLogout } from '@/api/user'
+import { clearToken, setToken } from '@/utils/auth'
 import { defineStore } from 'pinia'
-import { login as userLogin, logout as userLogout, getUserInfo, LoginData } from '@/api/user'
-import { setToken, clearToken } from '@/utils/auth'
 import { UserState } from './types'
 
 const useUserStore = defineStore('user', {
@@ -20,7 +20,7 @@ const useUserStore = defineStore('user', {
     registrationDate: undefined,
     accountId: undefined,
     certification: undefined,
-    role: '',
+    role: [],
   }),
 
   getters: {
@@ -30,12 +30,6 @@ const useUserStore = defineStore('user', {
   },
 
   actions: {
-    switchRoles() {
-      return new Promise((resolve) => {
-        this.role = this.role === 'user' ? 'admin' : 'user'
-        resolve(this.role)
-      })
-    },
     // Set user's information
     setInfo(partial: Partial<UserState>) {
       this.$patch(partial)
@@ -49,15 +43,16 @@ const useUserStore = defineStore('user', {
     // Get user's information
     async info() {
       const res = await getUserInfo()
-
-      this.setInfo(res.data)
+      const role = await getRole()
+      res.role = role
+      this.setInfo(res)
     },
 
     // Login
     async login(loginForm: LoginData) {
       try {
-        const res = await userLogin(loginForm)
-        setToken(res.data.token)
+        const res = await userLogin(loginForm);
+        setToken(res)
       } catch (err) {
         clearToken()
         throw err

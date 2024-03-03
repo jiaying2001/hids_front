@@ -1,6 +1,7 @@
-import axios from 'axios'
-import { Message, Modal } from '@arco-design/web-vue'
 import { useUserStore } from '@/store'
+import { getToken } from '@/utils/auth'
+import { Message, Modal } from '@arco-design/web-vue'
+import axios from 'axios'
 
 export interface HttpResponse<T = unknown> {
   status: number
@@ -9,8 +10,14 @@ export interface HttpResponse<T = unknown> {
   data: T
 }
 
+axios.defaults.baseURL = 'http://jiaying.info:8081'
+
 axios.interceptors.request.use(
   (config: any) => {
+    const token = getToken()
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`
+    }
     return config
   },
   (error) => {
@@ -23,7 +30,7 @@ axios.interceptors.response.use(
   (response: any) => {
     const res = response.data
     // if the custom code is not 20000, it is judged as an error.
-    if (res.code !== 20000) {
+    if (res.code !== 200) {
       Message.error({
         content: res.msg || 'Error',
         duration: 5 * 1000,
@@ -44,7 +51,7 @@ axios.interceptors.response.use(
       }
       return Promise.reject(new Error(res.msg || 'Error'))
     }
-    return res
+    return res.data
   },
   (error) => {
     Message.error({

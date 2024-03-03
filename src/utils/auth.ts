@@ -1,3 +1,4 @@
+
 const isLogin = () => {
   return !!localStorage.getItem('token')
 }
@@ -14,4 +15,5 @@ const clearToken = () => {
   localStorage.removeItem('token')
 }
 
-export { isLogin, getToken, setToken, clearToken }
+export { clearToken, getToken, isLogin, setToken }
+

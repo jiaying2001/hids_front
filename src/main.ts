@@ -5,7 +5,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import directive from './directive'
 import i18n from './locale'
-import './mock'
+// import './mock'
 import router from './router'
 import store from './store'
 // Styles are imported via arco-plugin. See config/plugin/arcoStyleImport.ts in the directory for details

@@ -28,7 +28,7 @@ export default {
   'workplace.allProject': 'All',
   'workplace.loadMore': 'More',
   'workplace.viewMore': 'More',
-  'workplace.contentData': 'Content Data',
+  'workplace.contentData': 'Log Path',
   'workplace.popularContent': 'Popular Content',
   'workplace.popularContent.text': 'text',
   'workplace.popularContent.image': 'image',

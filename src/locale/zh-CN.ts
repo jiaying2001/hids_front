@@ -39,6 +39,8 @@ export default {
   'menu.user': '个人中心',
   'navbar.docs': '文档中心',
   'navbar.action.locale': '切换为中文',
+  'online.training': '在线训练',
+  'function.name': '功能',
   ...localeSettings,
   ...localeMessageBox,
   ...localeLogin,

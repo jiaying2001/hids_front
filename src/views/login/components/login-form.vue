@@ -56,7 +56,7 @@ import useLoading from '@/hooks/loading'
 import { useUserStore } from '@/store'
 import { Message } from '@arco-design/web-vue'
 import { ValidatedError } from '@arco-design/web-vue/es/form/interface'
-import { defineComponent, onMounted, reactive, ref } from 'vue'
+import { defineComponent, reactive, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 
@@ -68,8 +68,8 @@ export default defineComponent({
     const { loading, setLoading } = useLoading()
     const userStore = useUserStore()
     const userInfo = reactive({
-      username: 'admin',
-      password: 'admin',
+      username: 'root',
+      password: 'root',
     })
     const handleSubmit: any = async ({ errors, values }: { errors: Record<string, ValidatedError> | undefined; values: LoginData }) => {
       if (!errors) {
@@ -91,12 +91,12 @@ export default defineComponent({
         }
       }
     }
-    // 演示地址自动登录
-    onMounted(() => {
-      setTimeout(() => {
-        handleSubmit({ errors: undefined, values: userInfo })
-      }, 5000)
-    })
+    // // 演示地址自动登录
+    // onMounted(() => {
+    //   setTimeout(() => {
+    //     handleSubmit({ errors: undefined, values: userInfo })
+    //   }, 5000)
+    // })
     const setRememberPassword = () => {
       //
     }
