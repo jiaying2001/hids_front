@@ -14,6 +14,6 @@ export default {
   'login.banner.subSlogan1': 'Rich page templates, covering most typical business scenarios',
   'login.banner.slogan2': 'Built-in solutions to common problems',
   'login.banner.subSlogan2': 'Internationalization, routing configuration, state management everything',
-  'login.banner.slogan3': 'Access visualization enhancement tool AUX',
+  'login.banner.slogan3': 'Access v enhancement tool AUX',
   'login.banner.subSlogan3': 'Realize flexible block development',
 }

@@ -19,5 +19,13 @@ export default {
         locale: 'online.training',
       },
     },
+    {
+      name: 'track',
+      path: '/track',
+      component: () => import('@/views/function/tracking/index.vue'),
+      meta: {
+        locale: 'menu.track',
+      },
+    },
   ],
 }

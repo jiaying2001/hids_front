@@ -46,7 +46,7 @@ export default defineComponent({
         setLoading(false)
       }
     }
-    fetchData()
+    // fetchData()
     return {
       loading,
       activityList,

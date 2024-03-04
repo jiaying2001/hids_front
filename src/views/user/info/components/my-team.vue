@@ -37,12 +37,12 @@ import useRequest from '@/hooks/request'
 
 export default defineComponent({
   setup() {
-    const defaultValue: MyTeamRecord[] = new Array(4).fill({})
-    const { loading, response: teamList } = useRequest<MyTeamRecord[]>(queryMyTeamList, defaultValue)
-    return {
-      loading,
-      teamList,
-    }
+    // const defaultValue: MyTeamRecord[] = new Array(4).fill({})
+    // const { loading, response: teamList } = useRequest<MyTeamRecord[]>(queryMyTeamList, defaultValue)
+    // return {
+    //   loading,
+    //   teamList,
+    // }
   },
 })
 </script>

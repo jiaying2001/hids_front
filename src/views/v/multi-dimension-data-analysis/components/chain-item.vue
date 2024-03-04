@@ -108,7 +108,7 @@ export default defineComponent({
         setLoading(false)
       }
     }
-    fetchData({ quota: props.quota })
+    // fetchData({ quota: props.quota })
     return {
       loading,
       count,

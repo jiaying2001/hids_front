@@ -1,20 +1,23 @@
 <template>
   <div class="container">
-    <a-card class="general-card">
-      <template #title>Path Configuration</template>
-      <div class="wrapper">
-        <a-form layout="vertical" :model="formData" :style="{ width: '600px' }" @submit="handleSubmit">
-          <a-form-item field="file" label="File Upload:">
-            <a-upload v-model="formData.file"
-                      :on-before-upload="onBeforeUpload"
-                      />
-          </a-form-item>
-          <a-form-item>
-            <a-button type="primary" html-type="submit" :loading="loading" @click="handleSubmit">Add</a-button>
-          </a-form-item>
-        </a-form>
-      </div>
-    </a-card>
+    <Breadcrumb :items="['function.name', 'online.training']" />
+    <div class="content">
+      <a-card class="general-card">
+        <template #title>Path Configuration</template>
+        <div class="wrapper">
+          <a-form layout="vertical" :model="formData" :style="{ width: '600px' }" @submit="handleSubmit">
+            <a-form-item field="file" label="File Upload:">
+              <a-upload v-model="formData.file"
+                        :on-before-upload="onBeforeUpload"
+                        />
+            </a-form-item>
+            <a-form-item>
+              <a-button type="primary" html-type="submit" :loading="loading" @click="handleSubmit">Add</a-button>
+            </a-form-item>
+          </a-form>
+        </div>
+      </a-card>
+    </div>
   </div>
 </template>
 
@@ -75,4 +78,32 @@ export default defineComponent({
     }
   }
 }
+
+.container {
+  padding: 0 20px 20px 20px;
+}
+
+//.content {
+//  display: flex;
+//  margin-top: 12px;
+//
+//  //&-left {
+//  //  flex: 1;
+//  //  margin-right: 16px;
+//  //  overflow: hidden;
+//  //  // background-color: var(--color-bg-2);
+//  //
+//  //  :deep(.arco-tabs-nav-tab) {
+//  //    margin-left: 16px;
+//  //  }
+//  //}
+//  //
+//  //&-right {
+//  //  width: 332px;
+//  //}
+//
+//  .tab-pane-wrapper {
+//    padding: 0 16px 16px 16px;
+//  }
+//}
 </style>

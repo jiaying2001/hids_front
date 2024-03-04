@@ -13,8 +13,8 @@ import localeGroupForm from '@/views/form/group/locale/zh-CN'
 
 import localeBasicProfile from '@/views/profile/basic/locale/zh-CN'
 
-import localeDataAnalysis from '@/views/visualization/data-analysis/locale/zh-CN'
-import localeMultiDAnalysis from '@/views/visualization/multi-dimension-data-analysis/locale/zh-CN'
+import localeDataAnalysis from '@/views/v/data-analysis/locale/zh-CN'
+import localeMultiDAnalysis from '@/views/v/multi-dimension-data-analysis/locale/zh-CN'
 
 import localeSuccess from '@/views/result/success/locale/zh-CN'
 import localeError from '@/views/result/error/locale/zh-CN'
@@ -29,13 +29,18 @@ import localeUserSetting from '@/views/user/setting/locale/zh-CN'
 import localeSettings from './zh-CN/settings'
 
 export default {
+  'menu.visualization.typology': '拓扑',
+  'menu.notification': '通知配置',
+  'menu.track': '排查页',
+  'menu.configuration': '配置',
+  'menu.ids': 'IDS配置',
   'menu.dashboard': '仪表盘',
   'menu.list': '列表页',
   'menu.result': '结果页',
   'menu.exception': '异常页',
   'menu.form': '表单页',
   'menu.profile': '详情页',
-  'menu.visualization': '数据可视化',
+  'menu.visualization': '可视化',
   'menu.user': '个人中心',
   'navbar.docs': '文档中心',
   'navbar.action.locale': '切换为中文',

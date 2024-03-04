@@ -1,20 +1,24 @@
+import Configuration from "@/router/modules/configuration";
 import Dashboard from './dashboard'
 /** simple */
 import Form from './form'
 import User from './user'
 import Function from './function'
+import Visualization from './visualization'
 /** simple end */
 
 export default [
+  User,
   Dashboard,
   /** simple */
   // Visualization,
   // List,
-  Form,
+  // Form,
   // Profile,
   // Result,
   // Exception,
   Function,
-  User,
+  Visualization,
+  Configuration,
   /** simple end */
 ]

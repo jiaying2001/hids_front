@@ -77,9 +77,9 @@ export default defineComponent({
       }
     }
     const typeChange: any = (contentType: string) => {
-      fetchData(contentType)
+      // fetchData(contentType)
     }
-    fetchData('text')
+    // fetchData('text')
     return {
       type,
       typeChange,

@@ -36,12 +36,12 @@ import useRequest from '@/hooks/request'
 
 export default defineComponent({
   setup() {
-    const defaultValue = Array(6).fill({} as MyProjectRecord)
-    const { loading, response: projectList } = useRequest<MyProjectRecord[]>(queryMyProjectList, defaultValue)
-    return {
-      loading,
-      projectList,
-    }
+    // const defaultValue = Array(6).fill({} as MyProjectRecord)
+    // const { loading, response: projectList } = useRequest<MyProjectRecord[]>(queryMyProjectList, defaultValue)
+    // return {
+    //   loading,
+    //   projectList,
+    // }
   },
 })
 </script>
