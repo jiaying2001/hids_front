@@ -26,9 +26,12 @@ import locale500 from '@/views/exception/500/locale/zh-CN'
 import localeUserInfo from '@/views/user/info/locale/zh-CN'
 import localeUserSetting from '@/views/user/setting/locale/zh-CN'
 /** simple end */
+import localOnlineTraining from '@/views/function/online-training/locale/zh-CN'
 import localeSettings from './zh-CN/settings'
 
 export default {
+  'menu.task': '任务列表',
+  'menu.task.online-training': '在线训练任务',
   'menu.visualization.typology': '拓扑',
   'menu.notification': '通知配置',
   'menu.track': '排查页',
@@ -66,5 +69,6 @@ export default {
   ...locale500,
   ...localeUserInfo,
   ...localeUserSetting,
+  ...localOnlineTraining,
   /** simple end */
 }

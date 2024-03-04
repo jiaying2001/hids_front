@@ -10,7 +10,7 @@ export interface HttpResponse<T = unknown> {
   data: T
 }
 
-axios.defaults.baseURL = 'http://jiaying.info:8081'
+axios.defaults.baseURL = 'http://localhost:8081'
 
 axios.interceptors.request.use(
   (config: any) => {

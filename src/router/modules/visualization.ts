@@ -5,7 +5,7 @@ export default {
   meta: {
     locale: 'menu.visualization',
     requiresAuth: true,
-    icon: 'icon-apps',
+    icon: 'icon-relation',
   },
   children: [
     {

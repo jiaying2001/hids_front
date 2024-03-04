@@ -5,6 +5,7 @@ import Form from './form'
 import User from './user'
 import Function from './function'
 import Visualization from './visualization'
+import Task from './task'
 /** simple end */
 
 export default [
@@ -19,6 +20,7 @@ export default [
   // Exception,
   Function,
   Visualization,
+  Task,
   Configuration,
   /** simple end */
 ]
